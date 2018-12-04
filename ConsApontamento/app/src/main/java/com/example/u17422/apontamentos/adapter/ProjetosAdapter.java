@@ -1,4 +1,4 @@
-package com.example.u17415.resquesttest.adapter;
+package com.example.u17422.apontamentos.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,9 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.u17415.resquesttest.R;
-import com.example.u17415.resquesttest.modelo.Apontamento;
-import com.example.u17415.resquesttest.modelo.Projeto;
+import com.example.u17422.apontamentos.R;
+import com.example.u17422.apontamentos.modelo.Projeto;
 
 import java.util.List;
 

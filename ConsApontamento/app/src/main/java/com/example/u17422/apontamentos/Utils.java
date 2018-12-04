@@ -1,30 +1,19 @@
-package com.example.u17415.resquesttest;
+package com.example.u17422.apontamentos;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.util.Log;
-import android.widget.ListView;
-
-import com.example.u17415.resquesttest.adapter.ApontamentosAdapter;
-import com.example.u17415.resquesttest.modelo.Apontamento;
-import com.example.u17415.resquesttest.modelo.Projeto;
+import com.example.u17422.apontamentos.modelo.Apontamento;
+import com.example.u17422.apontamentos.modelo.Projeto;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class Utils
 {
     List<Apontamento> apontamentos = new ArrayList<Apontamento>();
-    List<Projeto> projetos = new ArrayList<Projeto>();
+    String[] projetos;
 
     public List<Apontamento> getApontamentos(String end)
     {
@@ -37,9 +26,9 @@ public class Utils
         return retorno;
     }
 
-    public List<Projeto> getProjetos() {
+    public String[] getProjetos() {
         String json;
-        List<Projeto> retorno;
+        String[] retorno;
 
         json = ConnectionApi.getProjetosFromApi();
         retorno = parseJsonProjetos(json);
@@ -74,7 +63,7 @@ public class Utils
         }
     }
 
-    private List<Projeto> parseJsonProjetos(String json)
+    private String[] parseJsonProjetos(String json)
     {
         try
         {
@@ -83,10 +72,7 @@ public class Utils
 
             for (int i =0; i < array.length(); i++) {
                 JSONObject obj = array.getJSONObject(i);
-                Projeto projeto = new Projeto();
-                projeto.setID(obj.getLong("id"));
-                projeto.setNome(obj.getString("nome"));
-                projetos.add(projeto);
+                projetos[i] = obj.getString("nome");
             }
 
             return projetos;

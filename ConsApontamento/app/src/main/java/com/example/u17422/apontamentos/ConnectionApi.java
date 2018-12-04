@@ -1,6 +1,4 @@
-package com.example.u17415.resquesttest;
-
-import android.util.Log;
+package com.example.u17422.apontamentos;
 
 import java.io.BufferedReader;
 import java.io.IOException;

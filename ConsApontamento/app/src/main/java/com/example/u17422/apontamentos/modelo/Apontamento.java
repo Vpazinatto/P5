@@ -1,7 +1,6 @@
-package com.example.u17415.resquesttest.modelo;
+package com.example.u17422.apontamentos.modelo;
 
 import java.io.Serializable;
-import java.sql.Date;
 
 public class Apontamento implements Serializable {
     private Long ID;
