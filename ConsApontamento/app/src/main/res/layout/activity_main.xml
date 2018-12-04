@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/lista_apontamentos"></ListView>
 
-    <android.support.design.widget.FloatingActionButton
+    <Button
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,7 +21,5 @@
         android:layout_alignParentBottom="true"
         android:layout_gravity="end|bottom"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/ic_filtro"
-        app:backgroundTint="#F60404" />
-
+        android:src="@drawable/ic_filtro"></Button>
 </RelativeLayout>

@@ -21,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog load;
     private ListView listaApontamentos;
-    private FloatingActionButton btnFiltro;
+    private String[] projetos = {"Credenciamento Anual LIPLOS", "Projeto ASTOR", "Formiga ANALITICA", "DESFLOR CAMPUS III", "Lachir Hustkaper", "Projeto voar"};
+    private Button btnFiltro;
     private AlertDialog.Builder builder;
     private AlertDialog alert;
     private String choice = "";
@@ -38,6 +39,37 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setView(inflater.inflate(R.layout.filtro_dialog, null))
                 .setTitle(R.string.filtro)
+                .setSingleChoiceItems(projetos, 1, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which) {
+                            case 0: {
+                                choice = "1";
+                                break;
+                            }
+                            case 1: {
+                                choice = "2";
+                                break;
+                            }
+                            case 2: {
+                                choice = "3";
+                                break;
+                            }
+                            case 3: {
+                                choice = "4";
+                                break;
+                            }
+                            case 4: {
+                                choice = "5";
+                                break;
+                            }
+                            case 5: {
+                                choice = "10";
+                                break;
+                            }
+                        }
+                    }
+                })
                 .setPositiveButton(R.string.apply, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         onResume();
@@ -49,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
         });
         alert = builder.create();
 
-        btnFiltro = (FloatingActionButton) findViewById(R.id.fab);
+        btnFiltro = (Button) findViewById(R.id.fab);
         btnFiltro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
         @Override
         protected List<Apontamento> doInBackground(Void... params) {
             Utils util = new Utils();
+
+            //projetos = util.getProjetos();
 
             if (choice != "")
                 return util.getApontamentos("http://10.0.2.2:3000/apontamentos/projeto/" + choice);

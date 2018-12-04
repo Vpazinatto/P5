@@ -4,11 +4,10 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
 
-    <ScrollView
+    <!--<ScrollView
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
-        <!-- Here you put the rest of your current view-->
 
     <RadioGroup
         android:layout_width="match_parent"
@@ -32,7 +31,7 @@
             android:text="Formiga ANALITICA"
             android:textSize="17dp"/>
     </RadioGroup>
-    </ScrollView>
+    </ScrollView> !-->
 
     <View
         android:id="@+id/view"
