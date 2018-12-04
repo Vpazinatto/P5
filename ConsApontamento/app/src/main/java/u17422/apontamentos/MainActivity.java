@@ -9,8 +9,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
-import android.widget.RadioGroup;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ import u17422.apontamentos.modelo.Apontamento;
 public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog load;
-    private RadioGroup radioGroupProjetos;
+    private ListView listaApontamentos;
     private FloatingActionButton btnFiltro;
     private AlertDialog.Builder builder;
     private AlertDialog alert;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        radioGroupProjetos = (RadioGroup) findViewById(R.id.radiosProjetos);
+        listaApontamentos = (ListView) findViewById(R.id.lista_apontamentos);
 
         builder = new AlertDialog.Builder(MainActivity.this);
         LayoutInflater inflater = MainActivity.this.getLayoutInflater();
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         });
         alert = builder.create();
 
-        btnFiltro = findViewById(R.id.fab);
+        btnFiltro = (FloatingActionButton) findViewById(R.id.fab);
         btnFiltro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
