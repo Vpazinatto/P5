@@ -1,9 +1,8 @@
-package com.example.u17422.apontamentos;
+package u17422.apontamentos;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,17 +10,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ListView;
-
-import com.example.u17415.resquesttest.R;
-import com.example.u17422.apontamentos.adapter.ApontamentosAdapter;
-import com.example.u17422.apontamentos.modelo.Apontamento;
+import android.widget.RadioGroup;
 
 import java.util.List;
+
+import u17422.apontamentos.adapter.ApontamentosAdapter;
+import u17422.apontamentos.modelo.Apontamento;
 
 public class MainActivity extends AppCompatActivity {
 
     private ProgressDialog load;
-    private ListView listaApontamentos;
+    private RadioGroup radioGroupProjetos;
     private FloatingActionButton btnFiltro;
     private AlertDialog.Builder builder;
     private AlertDialog alert;
@@ -32,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listaApontamentos = (ListView) findViewById(R.id.lista_apontamentos);
+        radioGroupProjetos = (RadioGroup) findViewById(R.id.radiosProjetos);
 
         builder = new AlertDialog.Builder(MainActivity.this);
         LayoutInflater inflater = MainActivity.this.getLayoutInflater();
@@ -44,9 +43,9 @@ public class MainActivity extends AppCompatActivity {
                         onResume();
                     }
                 }).setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
+            public void onClick(DialogInterface dialog, int id) {
 
-                    }
+            }
         });
         alert = builder.create();
 
@@ -67,11 +66,11 @@ public class MainActivity extends AppCompatActivity {
         load.execute();
     }
 
-    public class GetJson extends AsyncTask<Void, Void,  List<Apontamento>> {
+    public class GetJson extends AsyncTask<Void, Void, List<Apontamento>> {
         @Override
         protected void onPreExecute() {
             load = ProgressDialog.show(MainActivity.this,
-                "Por favor Aguarde ...", "Conectando com o servidor...");
+                    "Por favor Aguarde ...", "Conectando com o servidor...");
         }
 
         @Override

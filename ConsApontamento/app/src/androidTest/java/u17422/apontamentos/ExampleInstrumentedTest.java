@@ -1,4 +1,4 @@
-package com.example.u17422.apontamentos;
+package u17422.apontamentos;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.u17422.apontamentos", appContext.getPackageName());
+        assertEquals("u17422.apontamentos", appContext.getPackageName());
     }
 }

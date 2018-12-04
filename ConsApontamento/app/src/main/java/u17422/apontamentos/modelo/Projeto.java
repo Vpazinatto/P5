@@ -1,4 +1,4 @@
-package com.example.u17422.apontamentos.modelo;
+package u17422.apontamentos.modelo;
 
 import java.io.Serializable;
 

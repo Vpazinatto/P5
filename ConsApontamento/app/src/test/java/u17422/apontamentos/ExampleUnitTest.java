@@ -1,4 +1,4 @@
-package com.example.u17422.apontamentos;
+package u17422.apontamentos;
 
 import org.junit.Test;
 

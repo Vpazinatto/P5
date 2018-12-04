@@ -1,7 +1,6 @@
-package com.example.u17422.apontamentos;
+package u17422.apontamentos;
 
-import com.example.u17422.apontamentos.modelo.Apontamento;
-import com.example.u17422.apontamentos.modelo.Projeto;
+import u17422.apontamentos.modelo.Apontamento;
 
 import org.json.JSONArray;
 import org.json.JSONException;

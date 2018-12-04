@@ -1,4 +1,4 @@
-package com.example.u17422.apontamentos.adapter;
+package u17422.apontamentos.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.u17422.apontamentos.R;
-import com.example.u17422.apontamentos.modelo.Apontamento;
+import u17422.apontamentos.R;
+import u17422.apontamentos.modelo.Apontamento;
 
 import java.util.List;
 

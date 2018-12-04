@@ -1,4 +1,4 @@
-package com.example.u17422.apontamentos.adapter;
+package u17422.apontamentos.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.example.u17422.apontamentos.R;
-import com.example.u17422.apontamentos.modelo.Projeto;
+import u17422.apontamentos.R;
+import u17422.apontamentos.modelo.Projeto;
 
 import java.util.List;
 
@@ -40,17 +40,17 @@ public class ProjetosAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Projeto projeto = projetos.get(position);
+        /*Projeto projeto = projetos.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = convertView;
         if (view == null) {
-            view = inflater.inflate(R.layout.list_item_projeto, parent, false);
+            view = inflater.inflate(R.layout., parent, false);
         }
 
-        TextView campoNomeProjeto = (TextView) view.findViewById(R.id.item_projetoNome);
-        campoNomeProjeto.setText(projeto.getNome());
+        TextView campoNomeProjeto = (TextView) view.findViewById(R.id.);
+        campoNomeProjeto.setText(projeto.getNome());*/
 
-        return view;
+        return convertView;
     }
 }

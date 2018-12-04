@@ -10,11 +10,11 @@
         android:layout_height="fill_parent">
         <!-- Here you put the rest of your current view-->
 
-
     <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
+        android:id="@+id/radiosProjetos"
         android:layout_marginBottom="10dp">
         <RadioButton
             android:layout_width="wrap_content"
