@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Consulta Apontamentos</string>
+    <string name="filtro">Filtrar Apontamentos</string>
+    <string name="teste">Teste</string>
+    <string name="apply">APPLY</string>
+    <string name="cancel">CANCEL</string>
+</resources>
